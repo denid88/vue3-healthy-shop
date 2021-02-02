@@ -10,7 +10,6 @@
 <script>
 import { useStore } from 'vuex'
 import { computed } from 'vue'
-
 export default {
   name: 'AppMessage',
   setup() {
@@ -32,6 +31,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-
-</style>

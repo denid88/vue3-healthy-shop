@@ -20,7 +20,7 @@
   </div>
 </template>
 <script>
-import { useLoginForm } from '../use/login-form'
+import { useLoginForm } from '../use/use.login.form'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
 import { error } from '../utils/error'

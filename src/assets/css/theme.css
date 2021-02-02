@@ -554,3 +554,12 @@ h3 {
     width: 100%;
     max-width: 600px;
 }
+.quantity-value {
+    margin-right: 10px;
+}
+.in-cart {
+    margin-bottom: 20px;
+}
+.in-cart td {
+    border-bottom: 1px solid #eee;
+}
