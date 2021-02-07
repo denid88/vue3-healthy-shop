@@ -16,7 +16,7 @@ export default {
     }
   },
   actions: {
-    async getProducts({commit, dispatch}) {
+    async fetchProducts({commit, dispatch}) {
       try {
         const { data } = await products.get('/products')
         commit('SET_PRODUCTS', data)
@@ -28,7 +28,7 @@ export default {
         }, { root: true })
       }
     },
-    async getCategories({commit, dispatch}) {
+    async fetchCategories({commit, dispatch}) {
       try {
         const { data } = await products.get('/categories')
         commit('SET_CATEGORIES', data)
@@ -43,6 +43,6 @@ export default {
   },
   getters: {
     getProducts: state => state.products,
-    getCategory: (type) => state => state.categories.find((c) => c.type === type).title
+    getCategory: state => category => state.categories.find((c) => c.type === category)
   }
 }

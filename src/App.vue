@@ -14,11 +14,13 @@ export  default  {
     const route = useRoute()
     const store = useStore()
 
-    const getProducts = () => store.dispatch('products/getProducts')
+    const fetchProducts = () => store.dispatch('products/fetchProducts')
+    const fetchCategories = () => store.dispatch('products/fetchCategories')
 
     return {
       layout: computed(() => route.meta.layout),
-      getProducts
+      fetchProducts,
+      fetchCategories
     }
   },
   components: {
@@ -26,8 +28,9 @@ export  default  {
     AuthLayout,
     EmptyLayout
   },
-  created() {
-    this.getProducts()
+  async created() {
+    await this.fetchCategories()
+    await this.fetchProducts()
   }
 }
 </script>

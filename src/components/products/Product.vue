@@ -13,6 +13,7 @@
 </template>
 <script>
 import { computed } from 'vue'
+import { useStore } from 'vuex'
 export default {
   name: 'Product',
   props: {
@@ -24,16 +25,15 @@ export default {
       type: String,
       required: true
     },
-    category: {
-      type: String,
-      required: true,
+    type: {
+      type: String
     }
   },
   setup(props) {
-    const category = computed(() => props.category)
-
+    const store = useStore()
+    const category = computed(() => store.getters['products/getCategory'](props.type))
     return {
-      category
+      category: category.value?.title != null ? category.value.title : ''
     }
   }
 }

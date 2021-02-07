@@ -5,7 +5,7 @@
         v-for="product in products"
         :key="product.id"
         :title="product.title"
-        :category="product.type"
+        :type="product.category"
         :img="product.img"
       />
     </div>

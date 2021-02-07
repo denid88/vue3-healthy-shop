@@ -610,9 +610,15 @@ h3 {
 .product__info {
     display: flex;
     justify-content: space-between;
+    padding: 10px 0 5px;
+    align-items: center;
 }
 .product__image img {
     max-width: 100%;
+}
+.product__category {
+    color: darkgray;
+    font-size: 14px;
 }
 main {
     display: flex;
