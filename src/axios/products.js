@@ -1,4 +1,4 @@
 import axios from 'axios'
-export const axiosProducts = axios.create({
+export const products = axios.create({
   baseURL: process.env.VUE_APP_BASE_LOCAL_URL,
 });

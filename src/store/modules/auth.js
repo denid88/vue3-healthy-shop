@@ -1,5 +1,5 @@
 const TOKEN_KEY = 'jwt-token'
-import { axiosAuth } from '../../axios/axios.auth'
+import { auth } from '../../axios/auth'
 import { error } from '../../utils/error'
 export default {
   namespaced: true,
@@ -20,7 +20,7 @@ export default {
     async login({ commit, dispatch }, params) {
       const url = `accounts:signInWithPassword?key=${process.env.VUE_APP_FB_API_KEY}`
       try {
-        const { data } = await axiosAuth.post(url, {...params, returnSecureToken: true})
+        const { data } = await auth.post(url, {...params, returnSecureToken: true})
         commit('SET_TOKEN', data.idToken)
         dispatch('clearMessage', null, { root: true })
       } catch (e) {

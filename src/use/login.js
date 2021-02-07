@@ -5,7 +5,7 @@ import { computed, watch } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 
-export function useLoginForm() {
+export function login() {
   const router = useRouter()
   const store = useStore()
 

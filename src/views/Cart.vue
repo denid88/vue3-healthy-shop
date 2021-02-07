@@ -44,13 +44,13 @@
   </div>
 </template>
 <script>
-import AppCartItem from '../components/UI/AppCartItem'
-import AppInCartItem from '../components/UI/AppInCartItem'
-import { useCart } from '../use/use.cart'
+import AppCartItem from '../components/ui/AppCartItem'
+import AppInCartItem from '../components/ui/AppInCartItem'
+import { cart } from '../use/cart'
 export default {
   name: 'Cart',
   setup() {
-    return {...useCart()}
+    return {...cart()}
   },
   components: {
     AppCartItem,

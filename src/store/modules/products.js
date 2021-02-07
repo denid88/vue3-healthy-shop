@@ -1,4 +1,4 @@
-import { axiosProducts } from '../../axios/axios.products'
+import { products } from '../../axios/products'
 import { error } from '../../utils/error'
 
 export default {
@@ -14,7 +14,7 @@ export default {
   actions: {
     async getProducts({commit, dispatch}) {
       try {
-        const { data } = await axiosProducts.get('/products')
+        const { data } = await products.get('/products')
         commit('SET_PRODUCTS', data)
         dispatch('clearMessage', null, { root: true })
       } catch (e) {

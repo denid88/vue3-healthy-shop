@@ -1,10 +1,9 @@
 <template>
-  <AppTemplate title="Home" />
+  <AppTemplate title="List of products" />
 </template>
 
 <script>
-import AppTemplate from '../components/UI/AppTemplate'
-
+import AppTemplate from '../components/ui/AppTemplate'
 export default {
   name: 'Home',
   components: {
@@ -12,7 +11,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

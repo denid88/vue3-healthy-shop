@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import AppMessage from '../components/UI/AppMessage'
+import AppMessage from '../components/ui/AppMessage'
 export default {
   name: 'AuthLayout',
   components: {

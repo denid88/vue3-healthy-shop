@@ -10,7 +10,6 @@ const routes = [
     component: Home,
     meta: {
       layout: 'main',
-      auth: true
     }
   },
   {
@@ -22,9 +21,9 @@ const routes = [
     }
   },
   {
-    path: '/product/:id',
+    path: '/products/:id',
     name: 'Product',
-    component: () => import('../views/Product.vue'),
+    component: () => import('../components/products/Product.vue'),
     meta: {
       layout: 'main'
     }

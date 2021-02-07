@@ -20,7 +20,7 @@
   </div>
 </template>
 <script>
-import { useLoginForm } from '../use/use.login.form'
+import { login } from '../use/login'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
 import { error } from '../utils/error'
@@ -36,7 +36,7 @@ export default {
         type: 'warning'
       })
     }
-    return {...useLoginForm()}
+    return {...login()}
   }
 }
 </script>

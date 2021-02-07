@@ -1,4 +1,4 @@
 import axios from 'axios'
-export const axiosAuth = axios.create({
+export const auth = axios.create({
   baseURL: process.env.VUE_APP_BASE_URL,
 });

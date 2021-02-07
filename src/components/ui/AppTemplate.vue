@@ -1,11 +1,15 @@
 <template>
-  <div class="card">
+  <div class="card with-opacity">
     <h1 class="card-title">{{title}}</h1>
-    <Products />
+    <main>
+      <ProductFilter />
+      <Products />
+    </main>
   </div>
 </template>
 <script>
-import Products from '../../views/Products'
+import Products from '../products/Products'
+import ProductFilter from '../products/ProductFilter'
 export default {
   name: 'AppTemplate',
   props: {
@@ -16,7 +20,8 @@ export default {
     }
   },
   components: {
-    Products
+    Products,
+    ProductFilter
   },
   setup(props) {
      document.title = props.title || 'Service online'
