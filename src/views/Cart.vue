@@ -46,11 +46,11 @@
 <script>
 import AppCartItem from '../components/ui/AppCartItem'
 import AppInCartItem from '../components/ui/AppInCartItem'
-import { cart } from '../use/cart'
+import { useCart } from '../use/cart'
 export default {
   name: 'Cart',
   setup() {
-    return {...cart()}
+    return {...useCart()}
   },
   components: {
     AppCartItem,

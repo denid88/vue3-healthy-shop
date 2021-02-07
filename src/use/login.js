@@ -5,7 +5,7 @@ import { computed, watch } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 
-export function login() {
+export function useLogin() {
   const router = useRouter()
   const store = useStore()
 

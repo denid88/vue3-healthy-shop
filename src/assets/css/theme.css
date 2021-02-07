@@ -607,6 +607,10 @@ h3 {
    align-items: center;
    justify-content: center;
 }
+.product__info {
+    display: flex;
+    justify-content: space-between;
+}
 .product__image img {
     max-width: 100%;
 }

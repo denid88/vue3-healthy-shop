@@ -5,6 +5,7 @@
         v-for="product in products"
         :key="product.id"
         :title="product.title"
+        :category="product.type"
         :img="product.img"
       />
     </div>
@@ -22,8 +23,10 @@ export default {
   setup() {
     const store = useStore()
     const products = computed(() => store.getters['products/getProducts'])
+    const categories = computed(() => store.getters['products/getCategories'])
     return {
-      products
+      products,
+      categories
     }
   }
 }

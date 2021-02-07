@@ -1,7 +1,7 @@
 import { useStore } from 'vuex'
 import { computed, reactive } from 'vue'
 
-export function cart() {
+export function useCart() {
   const store = useStore()
   const CART_MODEL = reactive({})
   const totalCount = computed(() =>
