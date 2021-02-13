@@ -1,18 +1,11 @@
 <template>
-  <div class="container with-nav">
-    <TheNavBar :isFixed="isFixed" />
-    <router-view/>
-  </div>
+  <router-view/>
 </template>
 <script>
-import TheNavBar from '../components/TheNavBar'
 import { onMounted, onUnmounted, ref } from 'vue'
 import { computed } from '@vue/reactivity'
 export default {
   name: 'MainLayout',
-  components: {
-    TheNavBar
-  },
   setup() {
 
     onMounted(() => {

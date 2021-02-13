@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import Products from '../products/Products'
+import Products from '../products/ProductsList'
 import ProductFilter from '../products/ProductFilter'
 export default {
   name: 'AppTemplate',

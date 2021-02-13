@@ -43,6 +43,8 @@ export default {
   },
   getters: {
     getProducts: state => state.products,
+    getProductById: state => id => state.products.find(p => p.id === id),
+    getCategories: state => state.categories,
     getCategory: state => category => state.categories.find((c) => c.type === category)
   }
 }

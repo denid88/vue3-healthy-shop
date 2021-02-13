@@ -18,6 +18,7 @@
     "primevue": "^3.2.2",
     "vee-validate": "^4.1.12",
     "vue": "^3.0.0",
+    "vue-i18n": "^9.0.0-rc.6",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0",
     "yup": "^0.32.8"
@@ -38,8 +39,8 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.0.0-0",
     "json-server": "^0.16.3",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^7.1.0",
     "typescript": "~3.9.3",
     "vue-jest": "^5.0.0-0"
   }

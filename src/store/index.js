@@ -1,6 +1,7 @@
 import { createStore, createLogger } from 'vuex';
 import auth from './modules/auth'
 import products from './modules/products'
+import cart from './modules/cart'
 
 const plugins = []
 
@@ -10,7 +11,16 @@ if (process.env.NODE_ENV === 'development') {
 
 export default createStore({
   state: {
-    message: null
+    message: null,
+    locale: {
+      title: 'English',
+      slug: 'en'
+    },
+    currency: {
+      symbol: '$',
+      title: 'US Dollar',
+      slug: 'USD'
+    }
   },
   mutations: {
     SET_MESSAGE(state, payload) {
@@ -34,6 +44,7 @@ export default createStore({
   },
   modules: {
     auth,
-    products
+    products,
+    cart
   },
 });
