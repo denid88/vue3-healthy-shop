@@ -14,8 +14,6 @@ import '../src/assets/libs/css/slinky.menu.css'
 import '../src/assets/libs/css/plugins.css'
 import '../src/assets/css/style.css'
 
-
-
 createApp(App)
   .use(i118n)
   .use(store)

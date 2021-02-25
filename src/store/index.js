@@ -1,7 +1,8 @@
-import { createStore, createLogger } from 'vuex';
+import { createStore, createLogger } from 'vuex'
 import auth from './modules/auth'
 import products from './modules/products'
 import cart from './modules/cart'
+import { i118n } from '../i118n/index'
 
 const plugins = []
 
@@ -14,37 +15,47 @@ export default createStore({
     message: null,
     locale: {
       title: 'English',
-      slug: 'en'
+      slug: 'en',
     },
     currency: {
       symbol: '$',
       title: 'US Dollar',
-      slug: 'USD'
-    }
+      slug: 'USD',
+    },
   },
   mutations: {
-    SET_MESSAGE(state, payload) {
-      state.message = payload
+    setMessage(state, payload) {
+      state.message = payload;
     },
-    CLEAR_MESSAGE(state) {
-      state.message = null
+    clearMessage(state) {
+      state.message = null;
+    },
+    changeLocale(state, payload) {
+      state.locale = payload
     }
   },
-  plugins: plugins,
+  plugins,
   actions: {
-    setMessage({commit}, message) {
-      commit('SET_MESSAGE', message)
+    setMessage({ commit }, message) {
+      commit('setMessage', message);
       setTimeout(() => {
-        commit('CLEAR_MESSAGE')
-      }, 5000)
+        commit('clearMessage');
+      }, 5000);
     },
-    clearMessage({commit}) {
-      commit('CLEAR_MESSAGE')
+    clearMessage({ commit }) {
+      commit('clearMessage');
+    },
+    changeLocale({ commit },  params) {
+      i118n.global.locale = params.slug
+      commit('changeLocale', params)
     }
+  },
+  getters: {
+    getCurrentLocale: state => state.locale
   },
   modules: {
     auth,
     products,
-    cart
+    cart,
   },
 });

@@ -8,7 +8,7 @@ const messages = {
 }
 
 export const i118n = createI18n({
-  locale: 'ru',
+  locale: 'en',
   fallbackLocale: 'en',
   messages
 })

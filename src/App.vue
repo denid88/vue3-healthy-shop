@@ -18,7 +18,7 @@ export  default  {
     const fetchCategories = () => store.dispatch('products/fetchCategories')
 
     return {
-      layout: computed(() => route.meta.layout),
+      layout: computed(() => route.meta?.layout),
       fetchProducts,
       fetchCategories
     }
