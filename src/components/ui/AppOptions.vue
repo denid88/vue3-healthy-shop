@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { useLanguage } from '@/use/language';
+import { useLanguage } from '@/use/language'
 export default {
   name: 'AppOptions',
   setup() {

@@ -1,8 +1,9 @@
 import { createStore, createLogger } from 'vuex'
-import auth from './modules/auth'
-import products from './modules/products'
-import cart from './modules/cart'
 import { i118n } from '../i118n/index'
+import auth from './modules/auth'
+import product from './modules/product'
+import cart from './modules/cart'
+import category from './modules/category'
 
 const plugins = []
 
@@ -55,7 +56,8 @@ export default createStore({
   },
   modules: {
     auth,
-    products,
+    product,
+    category,
     cart,
   },
 });

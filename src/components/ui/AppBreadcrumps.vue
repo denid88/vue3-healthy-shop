@@ -1,5 +1,5 @@
 <template>
-  <div class="breadcrumbs_area" style="background-image: url('https://denid88.sirv.com/healthy/banner/1920x200.jpg'); height: 200px;">
+  <div class="breadcrumbs_area">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -20,4 +20,11 @@ export default {
   name: 'AppBreadcrumbs'
 }
 </script>
+<style>
+.breadcrumbs_area {
+  background-attachment: fixed;
+  background-image: url('https://denid88.sirv.com/healthy/banner/1920x200.jpg') !important;
+  height: 200px;
+}
+</style>
 
