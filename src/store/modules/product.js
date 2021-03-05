@@ -26,7 +26,7 @@ export default {
     }
   },
   getters: {
-    getProducts: state => state.products,
+    getProducts: state => state.products.sort((a,b) => b.count - a.count),
     getProductById: state => id => state.products.find(p => p.id === id)
   }
 }
